@@ -14,7 +14,7 @@ a socket server library
 ***
 
 # 使用例程：
-```
+```cs
 #region 这里实现一个最简单的TCP通信服务器
     //继承TcpServer
     class MyTcpServer : TinySocketServer.TCP.TcpServer<MyTcpServer, MyTcpSession> { }
@@ -45,7 +45,7 @@ a socket server library
 ```
 运行
 
-```
+```cs
  class Program
     {
         static void Main(string[] args)
