@@ -17,10 +17,10 @@ a socket server library
 ```
 #region 这里实现一个最简单的TCP通信服务器
     //继承TcpServer
-    class TcpServer : TinySocketServer.TCP.TcpServer<TcpServer, TcpSession> { }
+    class MyTcpServer : TinySocketServer.TCP.TcpServer<MyTcpServer, MyTcpSession> { }
     
     //继承TcpSession
-    class TcpSession : TinySocketServer.TCP.TcpSession<TcpServer, TcpSession>
+    class MyTcpSession : TinySocketServer.TCP.TcpSession<MyTcpServer, MyTcpSession>
     {
         #region 在这里处理你的业务
         protected override void On_Close()
@@ -54,7 +54,7 @@ a socket server library
  
             //本地侦听端口
             var localPoint = new IPEndPoint(IPAddress.Any, 9090);
-            var tcp_server = new TcpServer();
+            var tcp_server = new MyTcpServer();
             //启用TCP服务器，侦听地下和端口值 和上面的UDP一样
             tcp_server.Start(localPoint);
          
