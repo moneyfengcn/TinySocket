@@ -7,7 +7,7 @@ using System.Text;
 namespace TinySocketServer.Base
 {
 
-    abstract public class SessionBase<TServer, TSession> : IDisposable
+    abstract public class SessionBase<TServer, TSession> : ISession<TServer>
           where TServer : ServerBase<TServer, TSession>, new()
           where TSession : SessionBase<TServer, TSession>, new()
     {
